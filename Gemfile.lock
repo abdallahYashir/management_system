@@ -76,6 +76,9 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-tailwindcssed (0.1.5)
+      rails (>= 5.2.3.4, < 7.1)
+      railties (> 4.0, < 7.1)
     erubi (1.12.0)
     ffi (1.16.0)
     globalid (1.2.1)
@@ -212,6 +215,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   devise (~> 4.9)
+  devise-tailwindcssed
   listen (~> 3.3)
   puma (~> 5.0)
   rails (~> 6.1.7, >= 6.1.7.6)
