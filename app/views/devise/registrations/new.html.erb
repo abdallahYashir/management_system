@@ -11,7 +11,24 @@
 
         <%= devise_error_messages! %>
 
-        <div class="mb-4">
+    <div class="mb-4">
+      <%= f.label :firstname, class: "block font-bold mb-2 text-gray-700 text-sm" %>
+      <%= f.email_field :firstname,
+                        autocomplete: "First name",
+                        placeholder: "Your first name",
+                        class: "appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none shadow focus:shadow-outline" %>
+    </div>
+
+    <div class="mb-4">
+      <%= f.label :lastname, class: "block font-bold mb-2 text-gray-700 text-sm" %>
+      <%= f.email_field :lastname,
+                        autocomplete: "Last name",
+                        placeholder: "Your last name",
+                        class: "appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none shadow focus:shadow-outline" %>
+    </div>
+
+
+    <div class="mb-4">
             <%= f.label :email, class: "block font-bold mb-2 text-gray-700 text-sm" %>
             <%= f.email_field :email,
                               autocomplete: "email",
