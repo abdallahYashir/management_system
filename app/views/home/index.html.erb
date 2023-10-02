@@ -1,3 +1,44 @@
-<h1 class="text-3xl">
-    Office Attendance system
+<h1 class="text-3xl font-bold mb-4">
+  Office Attendance System
 </h1>
+
+<div class="mb-4">
+  Week number: <span class="font-bold"><%= Date.current.beginning_of_week.strftime('%V') %></span> 
+</div>
+
+<div class="flex justify-between w-1/2">
+  <div class="mb-4">
+    From: <span class="font-bold"><%= Date.current.beginning_of_week.strftime('%A, %d/%m/%Y') %></span>
+  </div>
+
+  <div class="mb-4">
+    To: <span class="font-bold"><%= Date.current.end_of_week(:saturday).strftime('%A, %d/%m/%Y') %></span>
+  </div>
+</div>
+
+<table class="table-auto w-full">
+  <thead>
+    <tr>
+      <th class="px-4 py-2"></th>
+      <th class="px-4 py-2">Mon</th>
+      <th class="px-4 py-2">Tue</th>
+      <th class="px-4 py-2">Wed</th>
+      <th class="px-4 py-2">Thu</th>
+      <th class="px-4 py-2">Fri</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td class="border px-4 py-2"><%= user.firstname %> <%= user.lastname %></td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2"></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
