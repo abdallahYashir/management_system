@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :lastname, presence: true
   validates :email, presence: true, uniqueness: true
 
-  def is_admin?
-    self.admin
+  def admin?
+    admin
   end
 end
