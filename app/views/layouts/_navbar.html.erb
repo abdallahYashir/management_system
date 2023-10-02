@@ -11,7 +11,7 @@
   <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     <div class="text-sm lg:flex-grow">
       <%= link_to 'Home', root_path, class: ('active' if current_page?(root_path)), class: 'block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4' %>
-      <%= link_to 'Admin', rails_admin_path, class: 'block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4' if current_user.is_admin? %>
+      <%= link_to 'Admin', rails_admin_path, class: 'block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4' if current_user.admin? %>
     </div>
     <% if user_signed_in? %>
       <div class="mr-4 text-white">
