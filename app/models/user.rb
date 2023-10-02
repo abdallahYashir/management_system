@@ -10,4 +10,8 @@ class User < ApplicationRecord
   def admin?
     admin
   end
+
+  def active_for_authentication?
+    super && active?
+  end
 end
