@@ -15,6 +15,14 @@ Things you may want to cover:
 
 * Database initialization
 
+* How to start the project
+
+  * `bundle install`
+  * `rails db:create`
+  * `rails db:migrate`
+  * `rails db:seed`
+  * `rails s`
+
 * How to run the test suite
 
 * Services (job queues, cache servers, search engines, etc.)
