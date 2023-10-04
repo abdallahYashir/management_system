@@ -3,16 +3,16 @@
 </h1>
 
 <div class="mb-4">
-  Week number: <span class="font-bold"><%= Date.current.beginning_of_week.strftime('%V') %></span> 
+  Week number: <span class="font-bold"><%= @week_number %></span> 
 </div>
 
 <div class="flex justify-between w-1/2">
   <div class="mb-4">
-    From: <span class="font-bold"><%= Date.current.beginning_of_week.strftime('%A, %d/%m/%Y') %></span>
+    From: <span class="font-bold"><%= @from_date %></span>
   </div>
 
   <div class="mb-4">
-    To: <span class="font-bold"><%= Date.current.end_of_week(:saturday).strftime('%A, %d/%m/%Y') %></span>
+    To: <span class="font-bold"><%= @to_date %></span>
   </div>
 </div>
 
