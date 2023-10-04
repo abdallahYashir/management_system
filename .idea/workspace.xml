@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d33d9e8-eaa5-4e1a-8525-cdf080244072" name="Changes" comment="Todos OK + remove comments">
+    <list default="true" id="6d33d9e8-eaa5-4e1a-8525-cdf080244072" name="Changes" comment="Remove debug part for the moment">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -322,7 +323,7 @@
       <workItem from="1696057478088" duration="433000" />
       <workItem from="1696189532631" duration="6600000" />
       <workItem from="1696244600381" duration="1022000" />
-      <workItem from="1696417862210" duration="3012000" />
+      <workItem from="1696417862210" duration="3461000" />
     </task>
     <task id="LOCAL-00001" summary="Improve registration">
       <option name="closed" value="true" />
@@ -388,7 +389,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696422177410</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Remove debug part for the moment">
+      <option name="closed" value="true" />
+      <created>1696422459417</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696422459417</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,7 +422,8 @@
     <MESSAGE value="Display admin menu only if current user is admin ; but cancancan be to used soon" />
     <MESSAGE value="Adding attendance controller &amp; mapping the data structure for users &amp; attendances" />
     <MESSAGE value="Todos OK + remove comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Todos OK + remove comments" />
+    <MESSAGE value="Remove debug part for the moment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove debug part for the moment" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/system@db_migrate__system.rcov" NAME="db:migrate: system Coverage Results" MODIFIED="1695992113019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="system" />

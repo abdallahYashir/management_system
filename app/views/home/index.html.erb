@@ -16,8 +16,8 @@
   </div>
 </div>
 
-<table class="table-auto w-full">
-  <thead>
+<table class="w-full table-auto shadow-lg bg-white rounded">
+  <thead class="bg-gray-200">
   <tr>
     <th class="px-4 py-2"></th>
     <th class="px-4 py-2">Mon</th>
@@ -27,12 +27,14 @@
     <th class="px-4 py-2">Fri</th>
   </tr>
   </thead>
-  <tbody class="shadow">
+  <tbody>
   <% @users.each do |user| %>
-    <tr>
+    <tr class="hover:bg-gray-100">
       <td class="border px-4 py-2"><%= user[:employee][:firstname] %> <%= user[:employee][:lastname] %></td>
       <% user[:dates].each do |date| %>
-        <td class="border px-4 py-2 text-center cursor-pointer <%= date[:colour] %>"><%= fa_icon date[:icon] %></td>
+        <td class="border px-4 py-2 text-center cursor-pointer <%= date[:colour] %>">
+          <%= fa_icon date[:icon] %>
+        </td>
       <% end %>
     </tr>
   <% end %>
