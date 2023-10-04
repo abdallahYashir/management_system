@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d33d9e8-eaa5-4e1a-8525-cdf080244072" name="Changes" comment="Adding some basic color palette">
+    <list default="true" id="6d33d9e8-eaa5-4e1a-8525-cdf080244072" name="Changes" comment="Added lang">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -324,7 +324,7 @@
       <workItem from="1696189532631" duration="6600000" />
       <workItem from="1696244600381" duration="1022000" />
       <workItem from="1696417862210" duration="3601000" />
-      <workItem from="1696422864774" duration="1839000" />
+      <workItem from="1696422864774" duration="3062000" />
     </task>
     <task id="LOCAL-00001" summary="Improve registration">
       <option name="closed" value="true" />
@@ -414,7 +414,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696424433349</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added lang">
+      <option name="closed" value="true" />
+      <created>1696424838643</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1696424838643</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +450,8 @@
     <MESSAGE value="Remove debug part for the moment" />
     <MESSAGE value="Some table UI styling improvement" />
     <MESSAGE value="Adding some basic color palette" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding some basic color palette" />
+    <MESSAGE value="Added lang" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added lang" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/system@db_migrate__system.rcov" NAME="db:migrate: system Coverage Results" MODIFIED="1695992113019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="system" />

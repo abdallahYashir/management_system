@@ -31,6 +31,6 @@ class HomeController < ApplicationController
       }
     end
 
-    @users = @users.sort_by { |user| user[:employee].firstname }
+    @users = @users.sort_by { |user| [user[:employee].firstname, user[:employee].lastname] }
   end
 end
