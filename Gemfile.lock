@@ -81,6 +81,8 @@ GEM
       railties (> 4.0, < 7.1)
     erubi (1.12.0)
     ffi (1.16.0)
+    font-awesome-rails (4.7.0.8)
+      railties (>= 3.2, < 8.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
@@ -218,6 +220,7 @@ DEPENDENCIES
   byebug
   devise (~> 4.9)
   devise-tailwindcssed
+  font-awesome-rails
   listen (~> 3.3)
   puma (~> 5.0)
   pundit (~> 2.3)
