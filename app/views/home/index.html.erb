@@ -37,11 +37,6 @@
       <td class="border px-4 py-2"><%= user[:employee][:firstname] %> <%= user[:employee][:lastname] %></td>
       <% user[:dates].each do |date| %>
         <td class="border px-4 py-2 text-center cursor-pointer <%= date[:colour] %>"><%= fa_icon date[:icon] %></td>
-        <%# if date[:present] %>
-<!--          <td class="border px-4 py-2 text-center cursor-pointer text-green-500"><%#= fa_icon date[:icon] %></td>-->
-        <%# else %>
-<!--          <td class="border px-4 py-2 text-center cursor-pointer text-red-500"><%#= fa_icon date[:icon] %></td>-->
-        <%# end %>
       <% end %>
     </tr>
   <% end %>
