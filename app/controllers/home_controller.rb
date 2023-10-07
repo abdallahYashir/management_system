@@ -5,7 +5,12 @@ class HomeController < ApplicationController
     @week_number = Date.current.beginning_of_week.strftime('%V')
     @from_date = Date.current.beginning_of_week.strftime('%A, %d/%m/%Y')
     @to_date = Date.current.end_of_week(:saturday).strftime('%A, %d/%m/%Y')
-    dates = (Date.current.beginning_of_week..Date.current.end_of_week(:saturday)).to_a
+    dates = []
+    if Date.current.saturday? || Date.current.sunday?
+      dates = (Date.current.next_week.beginning_of_week..Date.current.next_week.end_of_week(:saturday)).to_a
+    else
+      dates = (Date.current.beginning_of_week..Date.current.end_of_week(:saturday)).to_a
+    end
 
     @users = User.includes(:attendances).all
     attendances_by_user_id = {}
