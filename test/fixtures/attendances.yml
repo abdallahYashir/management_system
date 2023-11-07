@@ -2,10 +2,10 @@
 
 one:
   user: one
-  present: false
-  date: 2023-10-04
+  present: true
+  date: <%= Date.today %>
 
 two:
   user: two
-  present: false
-  date: 2023-10-04
+  present: true
+  date: <%= Date.today.next_week(:monday) %>

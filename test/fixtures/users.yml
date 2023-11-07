@@ -1,15 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  firstname: MyString
-  lastname: MyString
-  email: MyString
-  admin: false
-  active: false
+  firstname: User 1
+  lastname: Lastname
+  email: random_email@mail.com
+  admin: true
+  active: true
 
 two:
-  firstname: MyString
-  lastname: MyString
-  email: MyString
+  firstname: User 2
+  lastname: Lastname
+  email: randome_user2@mail.com
   admin: false
-  active: false
+  active: true
