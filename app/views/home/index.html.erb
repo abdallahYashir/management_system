@@ -1,0 +1,44 @@
+<h1 class="text-3xl font-bold mb-4">
+  Office Attendance System
+</h1>
+
+<div class="mb-4">
+  Week number: <span class="font-bold"><%= @week_number %></span>
+</div>
+
+<div class="flex justify-between w-1/2">
+  <div class="mb-4">
+    From: <span class="font-bold"><%= @from_date %></span>
+  </div>
+
+  <div class="mb-4">
+    To: <span class="font-bold"><%= @to_date %></span>
+  </div>
+</div>
+
+<table class="w-full table-auto shadow-lg bg-white rounded">
+  <thead class="bg-gray-200">
+  <tr>
+    <th class="px-4 py-2"></th>
+    <th class="px-4 py-2">Mon</th>
+    <th class="px-4 py-2">Tue</th>
+    <th class="px-4 py-2">Wed</th>
+    <th class="px-4 py-2">Thu</th>
+    <th class="px-4 py-2">Fri</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @users.each do |user| %>
+    <tr class="hover:bg-gray-100">
+      <td class="border px-4 py-2"><%= user[:employee][:firstname] %> <%= user[:employee][:lastname] %></td>
+      <% user[:dates].each do |date| %>
+        <td class="border px-4 py-2 text-center cursor-pointer <%= date[:colour] %>">
+          <%= fa_icon date[:icon] %>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+
