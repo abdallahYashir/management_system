@@ -6,6 +6,10 @@
   Week number: <span class="font-bold"><%= @week_number %></span>
 </div>
 
+<div class="mb-4">
+  <span class="font-bold">Today</span>: <%= Date.today.to_formatted_s(:long) %>
+</div>
+
 <div class="flex justify-between w-1/2">
   <div class="mb-4">
     From: <span class="font-bold"><%= @from_date %></span>
@@ -22,7 +26,7 @@
     <th class="px-4 py-2"></th>
     <th class="px-4 py-2">Mon</th>
     <th class="px-4 py-2">Tue</th>
-    <th class="px-4 py-2">Wed</th>
+    <th class="px-4 py-2 ">Wed</th>
     <th class="px-4 py-2">Thu</th>
     <th class="px-4 py-2">Fri</th>
   </tr>
@@ -32,7 +36,7 @@
     <tr class="hover:bg-gray-100">
       <td class="border px-4 py-2"><%= user[:employee][:firstname] %> <%= user[:employee][:lastname] %></td>
       <% user[:dates].each do |date| %>
-        <td class="border px-4 py-2 text-center cursor-pointer <%= date[:colour] %>">
+        <td class="border px-4 py-2 text-center cursor-pointer <%= date[:colour] %> <%= 'bg-gray-100' if date[:date] == Date.today %>">
           <%= fa_icon date[:icon] %>
         </td>
       <% end %>
