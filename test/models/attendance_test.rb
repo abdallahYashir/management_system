@@ -4,17 +4,17 @@ class AttendanceTest < ActiveSupport::TestCase
 
   setup do
     @user = users(:one)
+    @attendance = attendances(:one)
   end
 
   test 'should save attendance successfully' do
     @user = users(:one)
-    @attendance = attendances(:one)
     assert @attendance.valid?
   end
 
-  # test 'should be present by default' do
-  #   assert @attendance[:present].present?
-  # end
+  test 'should be present by default' do
+    assert @attendance.present.present?
+  end
 
   test 'should not create attendance in the past' do
     attendance = Attendance.new(date: Date.yesterday, user_id: @user.id)
