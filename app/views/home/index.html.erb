@@ -36,7 +36,7 @@
     <tr class="hover:bg-gray-100">
       <td class="border px-4 py-2"><%= user[:employee][:firstname] %> <%= user[:employee][:lastname] %></td>
       <% user[:dates].each do |date| %>
-        <td class="border px-4 py-2 text-center cursor-pointer <%= date[:colour] %> <%= 'bg-gray-100' if date[:date] == Date.today %>">
+        <td id="date-<%= date[:date] %>" class="border px-4 py-2 text-center cursor-pointer <%= date[:colour] %> <%= 'bg-gray-100' if date[:date] == Date.today %>" onclick="bookDate('<%= user %>', '<%= date %>')" >
           <%= fa_icon date[:icon] %>
         </td>
       <% end %>

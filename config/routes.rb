@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'attendances/create'
+  post 'attendances', to: 'attendances#create'
   devise_for :users
   root 'home#index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'

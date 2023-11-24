@@ -28,6 +28,7 @@ class HomeController < ApplicationController
           colour = attendance.present? ? 'text-green-500' : 'text-red-500'
           {
             date: date,
+            dateObject: date.iso8601, # not sure if this is needed
             present: attendance.presence,
             icon: present,
             colour: colour
