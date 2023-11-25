@@ -7,7 +7,7 @@
 </div>
 
 <div class="mb-4">
-  <span class="font-bold">Today</span>: <%= Date.today.to_formatted_s(:long) %>
+  <span class="font-bold">Today: </span><span class="font-italic"><%= Date.today.strftime('%A') %></span>, <%= Date.today.to_formatted_s(:long) %>
 </div>
 
 <div class="flex justify-between w-1/2">
@@ -36,7 +36,7 @@
     <tr class="hover:bg-gray-100">
       <td class="border px-4 py-2"><%= user[:employee][:firstname] %> <%= user[:employee][:lastname] %></td>
       <% user[:dates].each do |date| %>
-        <td id="date-<%= date[:date] %>" class="border px-4 py-2 text-center cursor-pointer <%= date[:colour] %> <%= 'bg-gray-100' if date[:date] == Date.today %>" onclick="bookDate('<%= user %>', '<%= date %>')" >
+        <td id="date-<%= date[:date] %>" class="border px-4 py-2 text-center cursor-pointer <%= date[:colour] %> <%= 'bg-gray-100' if date[:date] == Date.today %>" onclick="bookDate('<%= user[:employee].id %>', '<%= date[:dateObject] %>')" >
           <%= fa_icon date[:icon] %>
         </td>
       <% end %>

@@ -1,20 +1,25 @@
 class AttendancesController < ApplicationController
   def create
-    # TODO: check if current user
-    # TODO: create attendance
-    # if true -> display success message
-    # if false -> display error message based on validation
-    params = permitted_params
-    pp "params: #{params}"
-  end
+    user = attendance_params[:user].to_i
+    date = attendance_params[:date]
 
-  def destroy
+    pp "date: #{date.class}"
+    return unless current_user.id == user
+
+    # @attendance = Attendance.new(user_id: user, date: permitted_params[:date])
+
+    # @attendance = Attendance.new(attendance_params)
+
+    # if @attendance.save
+    #   # handle a successful save
+    # else
+    #   # handle an unsuccessful save
+    # end
   end
 
   private
 
-  def permitted_params
-    params.permit(:user, :date)
+  def attendance_params
+    params.require(:attendance).permit(:user, :date)
   end
-
 end
