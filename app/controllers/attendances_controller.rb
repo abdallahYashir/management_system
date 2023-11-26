@@ -1,25 +1,28 @@
 class AttendancesController < ApplicationController
   def create
     user = attendance_params[:user].to_i
-    date = attendance_params[:date]
+    date = Date.parse(attendance_params[:date])
 
-    pp "date: #{date.class}"
     return unless current_user.id == user
 
-    # @attendance = Attendance.new(user_id: user, date: permitted_params[:date])
+    existing_attendance = Attendance.find_by(user: current_user, date: date)
 
-    # @attendance = Attendance.new(attendance_params)
+    return if existing_attendance.present?
 
-    # if @attendance.save
-    #   # handle a successful save
-    # else
-    #   # handle an unsuccessful save
-    # end
+    @attendance = Attendance.new(user: current_user, date: date)
+
+    if @attendance.save
+      flash[:notice] = 'Attendance saved'
+      # TODO: maybe use turbolinks to reload the table?
+    else
+      # handle an unsuccessful save
+    end
   end
 
   private
 
   def attendance_params
     params.require(:attendance).permit(:user, :date)
+    params
   end
 end
